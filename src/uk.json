@@ -1,0 +1,9 @@
+{
+	"header.home": "Головна",
+	"header.projects": "Проєкти",
+	"header.skills": "Навички",
+	"header.works": "Роботи",
+	"header.contacts": "Контакти",
+	"cont.title": "Моє прагнення - досягати <span>винятковості</span> в усьому, що я роблю.",
+	"cont.subtitle": "Нижче посилання на мої соціальні мережі<br/> Або пишіть сюди - <a style='color: wheat; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px;' className='main_mail' href='mailto:taraskotovych@gmail.com'>taraskotovych@gmail.com</a>"
+}

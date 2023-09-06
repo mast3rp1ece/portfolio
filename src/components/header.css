@@ -1,0 +1,37 @@
+.nav_container {
+	display: flex;
+	justify-content: space-between;
+	gap: 100px;
+}
+.links {
+	max-width: 500px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+}
+.header_container {
+	padding: 15px 0;
+	background: rgba(15, 15, 15, 0.61);
+	position: sticky;
+	z-index: 5;
+	top: 0;
+}
+.language_buttons {
+	display: flex;
+	align-items: center;
+}
+.header_burger {
+	display: none;
+}
+@media (max-width: 748px) {
+	.header_burger {
+		display: block;
+		width: 200px;
+		height: 100vh;
+		background: antiquewhite;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
