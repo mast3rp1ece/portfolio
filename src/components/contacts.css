@@ -1,5 +1,5 @@
 .contacts_container {
-	min-height: calc(100vh - 53px);
+	min-height: calc(100vh);
 	display: flex;
 	align-items: flex-end;
 	overflow-x: hidden;

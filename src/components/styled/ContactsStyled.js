@@ -8,10 +8,10 @@ font-size: ${(props) => props.var === 'title' ? '50px' : '16px'};
 padding: ${(props) => props.var === 'title' ? '0' : '5px 0 5px 10px'};
 border-left: ${(props) => props.var === 'title' ? '0' : '1px solid white'};
 display: ${(props) => props.var === 'title' ? 'block' : 'inline-block'};
-@media (max-width: 1024px) {
+@media (max-width: 1070px) {
 	font-size: ${(props) => props.var === 'title' ? '40px' : '16px'}
 }
-@media (max-width: 820px) {
+@media (max-width: 880px) {
 	font-size: ${(props) => props.var === 'title' ? '30px' : '16px'}
 }
 `
