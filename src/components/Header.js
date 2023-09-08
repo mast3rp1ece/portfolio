@@ -9,12 +9,12 @@ const Header = () => {
 	const toggleBurgerMenu = () => {
 		setIsBurgerActive(!isBurgerActive);
 
-		const body = document.body;
-		if (isBurgerActive) {
-			body.classList.remove('lock');
-		} else {
-			body.classList.add('lock');
-		}
+		// const body = document.body;
+		// if (isBurgerActive) {
+		// 	body.classList.remove('lock');
+		// } else {
+		// 	body.classList.add('lock');
+		// }
 	}
 	const burgerBtnClass = isBurgerActive ? 'burger_btn active' : 'burger_btn';
 	const burgerMenuClass = isBurgerActive ? 'burger_menu active' : 'burger_menu';

@@ -2,12 +2,15 @@
 	"header.home": "Home",
 	"header.projects": "Projects",
 	"header.skills": "Skills",
-	"header.works": "Works",
+	"header.works": "Work Experience",
 	"header.contacts": "Contacts",
 	"cont.title": "My aspiration is to achieve <br/><span>excellence</span> in everything I do.",
 	"cont.subtitle": "Below are links to my social networks<br/> Or write me here - <a style='color: wheat; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px;' className='main_mail' href='mailto:taraskotovych@gmail.com'>taraskotovych@gmail.com</a>",
 	"about.hello": "Hello Everyone 👋",
 	"about.title": "My name is Taras<br/> I am a Front-End <span>Developer</span>",
 	"about.subtitle": "I'm a passionate Front-End Developer with a strong desire for innovation and a keen eye for detail. My journey in web development has been fueled by a deep love for creating beautiful and user-friendly interfaces. I'm dedicated to crafting efficient, responsive, and accessible websites that provide an exceptional user experience. With a background in both design and coding, I bring a unique blend of creativity and technical expertise to every project. Let's work together to turn your ideas into captivating digital experiences.",
-	"about.skills": "My skills"	
+	"about.skills": "My skills",
+	"work.title": "My Experience",
+	"work.description1": "In my role at «IT Global», I worked as a front-end developer for the past three years. I focused on creating user-friendly interfaces for cutting-edge web applications. My achievements include designing visually appealing web pages that enhanced user engagement and improved their experience. I collaborated effectively with cross-functional teams, including designers and back-end developers, to ensure product quality and performance. I also actively explored and implemented new technologies and practices to enhance development efficiency and ensure compatibility across various browsers and devices. My proactive and adaptable approach contributed to my professional growth and the creation of high-quality, innovative products.",
+	"work.description2": "At «InfinitiTech Labs», I was a front-end developer specializing in React and Redux. My role involved turning design concepts into dynamic web interfaces. I used React to create interactive user experiences and integrated Redux for efficient state management. My work also included optimizing website performance and ensuring cross-browser and cross-device compatibility, contributing to our reputation for innovative digital solutions."
 }

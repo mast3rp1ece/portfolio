@@ -98,16 +98,13 @@
 	z-index: 3;
 	position: absolute;
 	top: 0;
-	transition: all .2s ease;
+	transition: all 3s ease;
 }
 .blur_back.active {
 	backdrop-filter: blur(3px);
 	display: block;
 }
 @media (max-width: 768px) {
-	body.lock {
-		overflow: hidden;
-	}
 	.burger_btn {
 		display: block;
 		left: 0;

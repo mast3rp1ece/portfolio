@@ -43,6 +43,9 @@ body {
   background: rgb(8, 8, 39);
   font-family: 'Montserrat', sans-serif;
 }
+body.lock {
+  overflow: hidden;
+}
 .wrapper {
   max-width: 1440px;
   width: 100%;
