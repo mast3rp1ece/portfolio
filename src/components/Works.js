@@ -4,6 +4,7 @@ import './works.css'
 import wokrkImage from '../img/worksphoto2.jpg'
 import { WorksIcon, WorksDescription } from "./styled/WorksStyled";
 import workIcon from '../img/works.png'
+import upworkIcon from '../img/upwork.png'
 
 const Works = () => {
 	const { t } = useTranslation();
@@ -29,6 +30,12 @@ const Works = () => {
 						<WorksDescription var='work-title'>InfinitiTech Labs</WorksDescription>
 						<WorksDescription>11.01.2023 - 23.08.2023</WorksDescription>
 						<WorksDescription var='work-description' >{t('work.description2')}</WorksDescription>
+					</div>
+					<div className="description_container">
+						<WorksIcon src={upworkIcon} alt="Work icon" />
+						<WorksDescription var='work-title'>Upwork</WorksDescription>
+						<WorksDescription>{t('upwork.date')}</WorksDescription>
+						<WorksDescription var='work-description' >{t('work.description3')}</WorksDescription>
 					</div>
 				</section>
 			</div>

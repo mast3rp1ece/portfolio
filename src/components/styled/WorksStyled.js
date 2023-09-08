@@ -17,4 +17,7 @@ export const WorksDescription = styled.p `
 	border-bottom: ${(props) => props.var === 'work-title' ? '2px solid rgb(230, 18, 18)' : 'none'};
 	width: ${(props) => props.var === 'work-description' ? '100%' : 'auto'};
 	animation: text-show 0.2s linear 0s normal none;
+	@media (max-width: 650px) {
+		text-align: ${(props) => props.var === 'work-description' ? 'center' : 'left'};
+	}
 `
