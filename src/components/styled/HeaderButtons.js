@@ -17,7 +17,7 @@ export const NavLink = styled(Link) `
 		color: gray;
 	}
 	&:focus {
-		color: red;
+		color: greenyellow;
 	}
 `
 export const LanguageButtons = styled.button `

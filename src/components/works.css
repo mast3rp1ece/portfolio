@@ -14,17 +14,29 @@
 
 .works_image {
 	width: fit-content;
-	border: 3px solid rgb(0, 0, 0);
+	/* border: 3px solid rgb(0, 0, 0); */
 	border-radius: 50%;
 	animation: shadow .5s linear 0s normal none;
-	box-shadow: 3px 3px 15px #fff ;
+	box-shadow: 2px 2px 10px #fff ;
 	perspective: 1000px;
+	position: relative;
+}
+.works_image::after {
+	box-shadow: inset 3px 3px 15px 0 #000000;
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	border-radius: 50%;
 }
 .works_image img {
 	object-fit: cover;
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
+	box-shadow: -5px -5px 15px #fa0000 inset;
 }
 .works_title {
 	font-size: 40px;

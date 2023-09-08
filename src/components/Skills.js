@@ -14,8 +14,7 @@ import nodejsIcon from '../img/nodejs.png';
 
 const Skills = () => {
 	const { t } = useTranslation();
-
-
+	
 	return (
 		<div className="skills_container">
 			<div className="wrapper">
