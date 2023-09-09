@@ -14,5 +14,16 @@
 	"work.description1": "In my role at «IT Global», I worked as a front-end developer for the past three years. I focused on creating user-friendly interfaces for cutting-edge web applications. My achievements include designing visually appealing web pages that enhanced user engagement and improved their experience. I collaborated effectively with cross-functional teams, including designers and back-end developers, to ensure product quality and performance. I also actively explored and implemented new technologies and practices to enhance development efficiency and ensure compatibility across various browsers and devices. My proactive and adaptable approach contributed to my professional growth and the creation of high-quality, innovative products.",
 	"work.description2": "At «InfinitiTech Labs», I was a front-end developer specializing in React and Redux. My role involved turning design concepts into dynamic web interfaces. I used React to create interactive user experiences and integrated Redux for efficient state management. My work also included optimizing website performance and ensuring cross-browser and cross-device compatibility, contributing to our reputation for innovative digital solutions.",
 	"work.description3": "I'm an experienced Upwork frontend developer with a successful track record spanning over a year. During this time, I've tackled a diverse range of projects, showcasing my proficiency in HTML, CSS, JavaScript, React, and Redux. My work spans from creating stunning web interfaces to optimizing existing ones. I'm committed to delivering quality results and ensuring client satisfaction. Let's leverage my expertise to accomplish your project goals.",
-	"upwork.date": "10.10.2022 - present days"
+	"upwork.date": "10.10.2022 - present days",
+	"projects.title": "My Projects",
+	"projects1.subtitle":"Sign in/up Forms",
+	"projects2.subtitle":"Post Publication Implementation",
+	"projects3.subtitle":"Event Listener",
+	"projects4.subtitle":"Simple Generator",
+	"projects1.description": "In this project, I gave a simple example of the implementation of the registration/login form, which checks the availability and correctness of the entered data.",
+	"projects2.description": "The project shows an example of the implementation of a possible site on which it is possible to add publications that include text, pictures, etc. The project uses Redux technology.",
+	"projects3.description": "This project uses the event listener technology, which, when the corresponding key on the keyboard is pressed, the corresponding sound is played.",
+	"projects4.description": "Here is a simple example of a generator with which we can generate a new index or change the font size.",
+	"projects.more": "About project...",
+	"projects.visit": "Visit Project"
 }

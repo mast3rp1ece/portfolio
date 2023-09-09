@@ -1,0 +1,37 @@
+.project_slider {
+	max-width: 500px;
+	width: 100%;
+	max-height: 35vh;
+	border-radius: 10px;
+	box-shadow: 3px 3px 10px black;
+}
+.project_title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	margin-bottom: 50px;
+}
+.project_subtitles_container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: space-between;
+	width: 100%;
+}
+.subtitles_links {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+.subtitles_text {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+@media (max-width: 600px) {
+	.project_title{
+		flex-direction: column-reverse;
+		gap: 0px;
+	}
+}

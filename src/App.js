@@ -5,6 +5,7 @@ import './reset.css';
 import './App.css';
 import Skills from './components/Skills';
 import Works from './components/Works';
+import Projects from './components/Projects';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <div className="App">
       <Header />
       <Routes>
+        <Route path='/projects' element={ <Projects/>} />
         <Route path='/contacts' element={ <Contacts />} />
         <Route path='/skills' element={ <Skills />} />
         <Route path='/works' element={ <Works />} />
