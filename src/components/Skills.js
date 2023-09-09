@@ -17,7 +17,7 @@ const Skills = () => {
 	
 	return (
 		<div className="skills_container">
-			<div className="wrapper">
+			<div className="wrapper">2
 				<section className="skills_about">
 					<div className="about_img">
 						<img src={skillsImage} alt="Author" />

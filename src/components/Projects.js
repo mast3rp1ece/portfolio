@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
+import { ReactCompareSlider, ReactCompareSliderImage, ReactCompareSliderHandle } from 'react-compare-slider';
 import { ProjectsContsiner, SectionTitle, ProjectsSection, SingleProjectContainer, ProjectTitle, ProjectIcon, SubtitlesLink } from "./styled/ProjectsStyled";
 import './projects.css';
 import projectIcon from '../img/project.png'
@@ -34,6 +34,7 @@ const Projects = () => {
 				<ProjectsSection>
 					<SingleProjectContainer>
 						<ReactCompareSlider className="project_slider"
+						handle={<ReactCompareSliderHandle buttonStyle={{width: 50, height: 50, margin: 5,}} />}
 						itemOne={<ReactCompareSliderImage src={formSlider1} alt="Image one" />}
 						itemTwo={<ReactCompareSliderImage src={formSlider2} alt="Image two" />}
 						/>
@@ -43,13 +44,14 @@ const Projects = () => {
 								<ProjectTitle var='projects_description'>{t('projects1.description')}</ProjectTitle>
 							</div>
 							<div className="subtitles_links">
-								<SubtitlesLink to='/signform' var='more'>{t('projects.more')}</SubtitlesLink>
+								<SubtitlesLink to='signform' var='more'>{t('projects.more')}</SubtitlesLink>
 								<SubtitlesLink to={signLink} target="_blank" var='visit'>{t('projects.visit')}</SubtitlesLink>
 							</div>
 						</div>
 					</SingleProjectContainer>
 					<SingleProjectContainer>
 						<ReactCompareSlider className="project_slider"
+							handle={<ReactCompareSliderHandle buttonStyle={{width: 50, height: 50, margin: 5,}} />}
 							itemOne={<ReactCompareSliderImage src={post1} alt="Image one" />}
 							itemTwo={<ReactCompareSliderImage src={post2} alt="Image two" />}
 							/>
@@ -59,13 +61,14 @@ const Projects = () => {
 									<ProjectTitle var='projects_description'>{t('projects2.description')}</ProjectTitle>
 								</div>
 								<div className="subtitles_links">
-									<SubtitlesLink to='/publication' var='more'>{t('projects.more')}</SubtitlesLink>
+									<SubtitlesLink to='publication' var='more'>{t('projects.more')}</SubtitlesLink>
 									<SubtitlesLink to={postLink} target="_blank" var='visit'>{t('projects.visit')}</SubtitlesLink>
 								</div>
 							</div>
 					</SingleProjectContainer>
 					<SingleProjectContainer>
 						<ReactCompareSlider className="project_slider"
+							handle={<ReactCompareSliderHandle buttonStyle={{width: 50, height: 50, margin: 5,}} />}
 							itemOne={<ReactCompareSliderImage src={events1} alt="Image one" />}
 							itemTwo={<ReactCompareSliderImage src={events2} alt="Image two" />}
 							/>
@@ -82,6 +85,7 @@ const Projects = () => {
 					</SingleProjectContainer>
 					<SingleProjectContainer>
 						<ReactCompareSlider className="project_slider"
+							handle={<ReactCompareSliderHandle buttonStyle={{width: 50, height: 50, margin: 5,}} />}
 							itemOne={<ReactCompareSliderImage src={gen1} alt="Image one" />}
 							itemTwo={<ReactCompareSliderImage src={gen2} alt="Image two" />}
 							/>
@@ -91,7 +95,7 @@ const Projects = () => {
 									<ProjectTitle var='projects_description'>{t('projects4.description')}</ProjectTitle>
 								</div>
 								<div className="subtitles_links">
-									<SubtitlesLink to='/generator' var='more'>{t('projects.more')}</SubtitlesLink>
+									<SubtitlesLink to='generator' var='more'>{t('projects.more')}</SubtitlesLink>
 									<SubtitlesLink to={generatorLink} target="_blank" var='visit'>{t('projects.visit')}</SubtitlesLink>
 								</div>
 							</div>
