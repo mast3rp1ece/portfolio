@@ -1,12 +1,13 @@
 import React from "react";
-import './signform.css'
+import { SingleProject } from "../styled/SingleProjectStyled";
+import { ProjectTitle } from "../styled/ProjectsStyled";
 
 const SignForm = () => {
 
 	return (
-		<div className="singForm_container">
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi quidem cupiditate iste optio ducimus eaque odit quas, molestiae, unde aliquam sint accusamus rem atque ab reprehenderit sunt. Reprehenderit, est consectetur?10
-		</div>
+		<SingleProject>
+			<ProjectTitle var='projects_title'>Sign up/in Form</ProjectTitle>
+		</SingleProject>
 	)
 }
 

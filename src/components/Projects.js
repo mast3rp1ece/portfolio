@@ -34,6 +34,7 @@ const Projects = () => {
 				<ProjectsSection>
 					<SingleProjectContainer>
 						<ReactCompareSlider className="project_slider"
+						position={40}
 						handle={<ReactCompareSliderHandle buttonStyle={{width: 50, height: 50, margin: 5,}} />}
 						itemOne={<ReactCompareSliderImage src={formSlider1} alt="Image one" />}
 						itemTwo={<ReactCompareSliderImage src={formSlider2} alt="Image two" />}
@@ -51,6 +52,7 @@ const Projects = () => {
 					</SingleProjectContainer>
 					<SingleProjectContainer>
 						<ReactCompareSlider className="project_slider"
+						position={65}
 							handle={<ReactCompareSliderHandle buttonStyle={{width: 50, height: 50, margin: 5,}} />}
 							itemOne={<ReactCompareSliderImage src={post1} alt="Image one" />}
 							itemTwo={<ReactCompareSliderImage src={post2} alt="Image two" />}
@@ -85,6 +87,7 @@ const Projects = () => {
 					</SingleProjectContainer>
 					<SingleProjectContainer>
 						<ReactCompareSlider className="project_slider"
+						position={35}
 							handle={<ReactCompareSliderHandle buttonStyle={{width: 50, height: 50, margin: 5,}} />}
 							itemOne={<ReactCompareSliderImage src={gen1} alt="Image one" />}
 							itemTwo={<ReactCompareSliderImage src={gen2} alt="Image two" />}

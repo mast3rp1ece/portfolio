@@ -8,6 +8,7 @@ import Works from './components/Works';
 import Projects from './components/Projects';
 import SignForm from './components/projects/SignForm';
 import Home from './components/Home';
+import PostPublication from './components/projects/PostPublication';
 
 
 function App() {
@@ -16,13 +17,15 @@ function App() {
       <div className="App">
       <Header />
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/projects' element={ <Projects/>}>
+        <Route index element={<Home/>}/>
+        <Route path='projects'>
+          <Route index element={<Projects/>}/>
           <Route path='signform' element={<SignForm/>}/>
+          <Route path='publication' element={<PostPublication/>}/>
         </Route>
-        <Route path='/contacts' element={ <Contacts />} />
-        <Route path='/skills' element={ <Skills />} />
-        <Route path='/works' element={ <Works />} />
+        <Route path='contacts' element={ <Contacts />} />
+        <Route path='skills' element={ <Skills />} />
+        <Route path='works' element={ <Works />} />
       </Routes>
       </div>
     </Router>
