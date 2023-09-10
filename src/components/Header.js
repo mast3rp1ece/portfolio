@@ -41,7 +41,7 @@ const Header = () => {
 					</div>
 					<div className={burgerMenuClass}></div>
 					<div className={burgerLinksClass}>
-						<NavLinkHeader className="home_link" onClick={() => setIsBurgerActive(false)} var='home' to='/finalhomework' isActive={currentLocation.pathname === '/finalhomework'}>{t('header.home')}</NavLinkHeader>
+						<NavLinkHeader className="home_link" onClick={() => setIsBurgerActive(false)} var='home' to='/finalhomework/' isActive={currentLocation.pathname === '/finalhomework/'}>{t('header.home')}</NavLinkHeader>
 						<div className="links">
 							<div className="language_buttons">
 								<LanguageButtons isActive={isEnglish} onClick={() => changeLanguage('en')} var='eng'>En</LanguageButtons>
