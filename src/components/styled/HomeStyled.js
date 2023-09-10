@@ -15,6 +15,9 @@ export const HomeContainer = styled.div `
 	}
 	p.subtitle {
 		font-size: 20px;
+		@media (max-width: 400px) {
+			font-size: 18px;
+		}
 		span {
 			color: grey;
 		}
@@ -43,7 +46,7 @@ export const HOmeLink = styled(Link) `
 	&:hover {
 		background: grey;
 	}
-	animation: show-project 1s ease 0s;
+	animation: text-pulse 5s infinite ease 0s;
 `
 export const HomeTitles = styled.div `
 	font-size: 50px;
@@ -59,5 +62,8 @@ export const HomeTitles = styled.div `
 	@keyframes show-project {
 		0% {transform: scale(0); opacity: 0;}
 		100% {transform: scale(1); opacity: 1;}
+	}
+	@media (max-width: 400px) {
+		font-size: 40px;
 	}
 `

@@ -52,3 +52,8 @@ body.lock {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+@keyframes text-pulse {
+  0%,100% {transform: scale(0.95);}
+  50% {transform: scale(1.05);}
+}

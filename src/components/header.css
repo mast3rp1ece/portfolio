@@ -66,11 +66,13 @@
 	transform-origin: center;
 	transform: rotate(45deg) translateY(15px);
 	margin-left: 6px;
+	background: rgb(230, 18, 18);
 }
 .burger_btn.active::after {
 	transform-origin: center;
 	transform: rotate(-45deg) translateY(-15px);
 	margin-left: 6px;
+	background: rgb(230, 18, 18);
 }
 .burger_btn.active span {
 	transform: scale(0);
