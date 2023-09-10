@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { NavLink, LanguageButtons } from "./styled/HeaderButtons";
+import { useLocation } from "react-router-dom";
+import { NavLinkHeader, LanguageButtons } from "./styled/HeaderButtons";
 import './header.css';
 
 const Header = () => {
@@ -16,6 +17,9 @@ const Header = () => {
 		// 	body.classList.add('lock');
 		// }
 	}
+	const isEnglish = i18n.language === 'en';
+	const isUkrainian = i18n.language === 'uk';
+	const currentLocation = useLocation();
 	const burgerBtnClass = isBurgerActive ? 'burger_btn active' : 'burger_btn';
 	const burgerMenuClass = isBurgerActive ? 'burger_menu active' : 'burger_menu';
 	const burgerLinksClass = isBurgerActive ? 'nav_subcont active' : 'nav_subcont';
@@ -23,6 +27,7 @@ const Header = () => {
 
 	const changeLanguage = (lng) => {
 		i18n.changeLanguage(lng);
+		setIsBurgerActive(false);
 	};
 
 	return (
@@ -36,16 +41,16 @@ const Header = () => {
 					</div>
 					<div className={burgerMenuClass}></div>
 					<div className={burgerLinksClass}>
-						<NavLink className="home_link" onClick={() => setIsBurgerActive(false)} var='home' to='/'>{t('header.home')}</NavLink>
+						<NavLinkHeader className="home_link" onClick={() => setIsBurgerActive(false)} var='home' to='/' isActive={currentLocation.pathname === '/'}>{t('header.home')}</NavLinkHeader>
 						<div className="links">
 							<div className="language_buttons">
-								<LanguageButtons onClick={() => changeLanguage('en')} var='eng'>En</LanguageButtons>
-								<LanguageButtons onClick={() => changeLanguage('uk')}>Укр</LanguageButtons>
+								<LanguageButtons isActive={isEnglish} onClick={() => changeLanguage('en')} var='eng'>En</LanguageButtons>
+								<LanguageButtons isActive={isUkrainian} onClick={() => changeLanguage('uk')}>Укр</LanguageButtons>
 							</div>
-							<NavLink onClick={() => setIsBurgerActive(false)} to='/projects'>{t('header.projects')}</NavLink>
-							<NavLink onClick={() => setIsBurgerActive(false)} to='/skills'>{t('header.skills')}</NavLink>
-							<NavLink onClick={() => setIsBurgerActive(false)} to='/works'>{t('header.works')}</NavLink>
-							<NavLink onClick={() => setIsBurgerActive(false)} to='/contacts'>{t('header.contacts')}</NavLink>
+							<NavLinkHeader onClick={() => setIsBurgerActive(false)} to='/projects' isActive={currentLocation.pathname === '/projects'}>{t('header.projects')}</NavLinkHeader>
+							<NavLinkHeader onClick={() => setIsBurgerActive(false)} to='/skills' isActive={currentLocation.pathname === '/skills'}>{t('header.skills')}</NavLinkHeader>
+							<NavLinkHeader onClick={() => setIsBurgerActive(false)} to='/works' isActive={currentLocation.pathname === '/works'}>{t('header.works')}</NavLinkHeader>
+							<NavLinkHeader onClick={() => setIsBurgerActive(false)} to='/contacts' isActive={currentLocation.pathname === '/contacts'}>{t('header.contacts')}</NavLinkHeader>
 						</div>
 					</div>
 				</nav>
