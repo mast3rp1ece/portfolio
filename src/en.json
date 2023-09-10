@@ -30,8 +30,8 @@
 	"sing.p2": "The form is implemented through React, using styled-components.",
 	"publish.p1": "In this project, I created the ability to add posts to a page. A random amount of likes, comments, and shares is also added to the post. When you click on each of them, the number will increase by 1, when you click again, it will decrease.",
 	"publish.p2": "Here we see one of the Redux usage options. We also do not forget about the usual HTML, CSS, JavaScript.",
-	"eventer.p1": "",
-	"eventer.p2": "",
-	"generator.p1": "",
-	"generator.p2": ""
+	"eventer.p1": "In this interesting project, we see a site created where when we press the corresponding key on the keyboard, we hear different sounds of nature. On the screen is a list of keys to be pressed. When pressed, each key is illuminated. Also, on each key is written which sound will be played.",
+	"eventer.p2": "The Event Listener technology is used here, with the help of which we bind the corresponding action to a certain key.",
+	"generator.p1": "In this project I implemented a simple generator. When you press the Generate key, we generate a number, when you press it again, the number increases by 1. We can also change the font size of the generated number using two keys.",
+	"generator.p2": "Here, pure JavaScript is used, with which we can create such a generator."
 }

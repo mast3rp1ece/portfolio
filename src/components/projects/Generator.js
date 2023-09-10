@@ -26,15 +26,15 @@ const Generator = () => {
 		<SingleProject>
 			<div className="wrapper">
 				<SingleProjectContainer>
-					<ProjectTitle var='projects_title'>{t('projects1.subtitle')}</ProjectTitle>
+					<ProjectTitle var='projects_title'>{t('projects4.subtitle')}</ProjectTitle>
 				</SingleProjectContainer>
 				<SingleProjectSection>
 						<ProjImage src={images[currentIndex]} alt="" />
 					<ProjText>
-						<p>У цьому проекті показаний приклад реалізації форми реєстрації/входу. Форма перевіряє правильність введенних данних, запам'ятовує зареєстрованого користувача та в разі невідповідності повідомляє користувача.</p>
-						<p>Форма реалізована через React, за допомогою styled-components.</p>
+						<p>{t('generator.p1')}</p>
+						<p>{t('generator.p2')}</p>
 					</ProjText>
-					<ProjLink to='https://mast3rp1ece.github.io/react20/' target="_blank">{t('projects.visit')}</ProjLink>
+					<ProjLink to='https://mast3rp1ece.github.io/cursor-ed-advanced/homework13/index.html' target="_blank">{t('projects.visit')}</ProjLink>
 				</SingleProjectSection>
 			</div>
 		</SingleProject>

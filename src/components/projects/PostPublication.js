@@ -34,7 +34,7 @@ const PostPublication = () => {
 						<p>{t('publish.p1')}</p>
 						<p>{t('publish.p2')}</p>
 					</ProjText>
-					<ProjLink to='https://mast3rp1ece.github.io/react20/' target="_blank">{t('projects.visit')}</ProjLink>
+					<ProjLink to='https://mast3rp1ece.github.io/react21/' target="_blank">{t('projects.visit')}</ProjLink>
 				</SingleProjectSection>
 			</div>
 		</SingleProject>

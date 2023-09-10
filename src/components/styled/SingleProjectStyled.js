@@ -21,6 +21,12 @@ export const SingleProjectSection = styled.section `
 	gap: 30px;
 	flex-direction: column;
 	margin-top: 50px;
+	position: relative;
+	transition: all 0.3s ease;
+	@keyframes show-project {
+		0% {transform: scale(0); opacity: 0;}
+		100% {transform: scale(1); opacity: 1;}
+	}
 `
 
 export const ProjImage = styled.img `
@@ -28,6 +34,7 @@ export const ProjImage = styled.img `
 	width: 100%;
 	border-radius: 10px;
 	transition: all 0.3s ease;
+	animation: show-project .4s ease 0s;
 `
 export const ProjText = styled.div `
 	p {
@@ -35,6 +42,7 @@ export const ProjText = styled.div `
 		text-align: center;
 		font-size: 18px;
 		color: whitesmoke;
+		animation: show-project .6s ease 0s;
 		letter-spacing: 1px;
 		@media (max-width: 600px) {
 			font-size: 14px;
@@ -50,6 +58,7 @@ export const ProjLink = styled(Link) `
 	border-radius: 30px;
 	transition: all 0.3s ease;
 	box-shadow: 2px 2px 10px black;
+	animation: show-project .8s ease 0s;
 	&::after {
 		content: url(${linkImage});
 		width: 24px;
