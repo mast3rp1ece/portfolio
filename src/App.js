@@ -15,7 +15,7 @@ import Generator from './components/projects/Generator';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/finalhomework'>
       <div className="App">
       <Header />
       <Routes>
