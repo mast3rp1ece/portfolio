@@ -53,10 +53,11 @@ export const ProjectTitle = styled.h2 `
 	padding: ${(props) => props.var === 'projects_title' ? '15px 0' : '0'};
 	font-style: ${(props) => props.var === 'projects_description' ? 'italic' : 'normal'};
 	position: relative;
+	text-align: ${(props) => props.var === 'projects_title' ? 'center' : 'left'};
 	@media (max-width: 600px) {
-		font-size: ${(props) => props.var === 'projects_subtitle' ? '20px' : props.var === 'projects_description' ? '16px' : props.var === 'projects_title' ? '35px' : 'none'}
+		font-size: ${(props) => props.var === 'projects_subtitle' ? '20px' : props.var === 'projects_description' ? '16px' : props.var === 'projects_title' ? '25px' : 'none'};
 	}
-	animation: ${(props) => props.var === 'projects_title' ? 'text-show 0.3s linear 0s normal none' : 'none'}
+	animation: ${(props) => props.var === 'projects_title' ? 'text-show 0.3s linear 0s normal none' : 'none'};
 `
 
 export const ProjectIcon = styled.img `

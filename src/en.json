@@ -25,5 +25,13 @@
 	"projects3.description": "This project uses the event listener technology, which, when the corresponding key on the keyboard is pressed, the corresponding sound is played.",
 	"projects4.description": "Here is a simple example of a generator with which we can generate a new index or change the font size.",
 	"projects.more": "About project...",
-	"projects.visit": "Visit Project"
+	"projects.visit": "Visit Project",
+	"sing.p1": "This project shows an example of the implementation of the registration/login form. The form checks the correctness of the entered data, remembers the registered user and, in case of inconsistency, notifies the user.",
+	"sing.p2": "The form is implemented through React, using styled-components.",
+	"publish.p1": "In this project, I created the ability to add posts to a page. A random amount of likes, comments, and shares is also added to the post. When you click on each of them, the number will increase by 1, when you click again, it will decrease.",
+	"publish.p2": "Here we see one of the Redux usage options. We also do not forget about the usual HTML, CSS, JavaScript.",
+	"eventer.p1": "",
+	"eventer.p2": "",
+	"generator.p1": "",
+	"generator.p2": ""
 }
