@@ -19,7 +19,7 @@ function App() {
       <div className="App">
       <Header />
       <Routes>
-        <Route path='home' element={<Home/>}/>
+        <Route path='/finalhomework' element={<Home/>}/>
         <Route path='projects'>
           <Route index element={<Projects/>}/>
           <Route path='signform' element={<SignForm/>}/>
