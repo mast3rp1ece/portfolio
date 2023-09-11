@@ -11,12 +11,19 @@ import Home from './components/Home';
 import PostPublication from './components/projects/PostPublication';
 import Eventer from './components/projects/Eventer';
 import Generator from './components/projects/Generator';
+import { useSelector } from 'react-redux';
+
 
 
 function App() {
+
+  const darkMode = useSelector((state) => state.theme.darkMode);
+  const bodyStyle = {
+    background: darkMode ? '' : '#dee4e7',
+  }
   return (
-    <Router basename='/finalhomework'>
-      <div className="App">
+    <Router>
+      <div style={bodyStyle} className="App">
       <Header />
       <Routes>
         <Route path='/' element={<Home/>}/>

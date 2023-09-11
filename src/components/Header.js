@@ -1,22 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
 import { NavLinkHeader, LanguageButtons } from "./styled/HeaderButtons";
 import './header.css';
+import ThemeToggle from "../redux/ThemeToggle";
+
 
 const Header = () => {
 	const { t, i18n } = useTranslation();
 	const [isBurgerActive, setIsBurgerActive] = useState(false);
 	const toggleBurgerMenu = () => {
 		setIsBurgerActive(!isBurgerActive);
-
-		// const body = document.body;
-		// if (isBurgerActive) {
-		// 	body.classList.remove('lock');
-		// } else {
-		// 	body.classList.add('lock');
-		// }
 	}
+
 	const isEnglish = i18n.language === 'en';
 	const isUkrainian = i18n.language === 'uk';
 	const currentLocation = useLocation();
@@ -24,6 +20,17 @@ const Header = () => {
 	const burgerMenuClass = isBurgerActive ? 'burger_menu active' : 'burger_menu';
 	const burgerLinksClass = isBurgerActive ? 'nav_subcont active' : 'nav_subcont';
 	const burgerBlur = isBurgerActive ? 'blur_back active' : 'blur_back';
+
+	
+
+	useEffect(() => {
+		const body = document.body;
+		if (isBurgerActive) {
+			body.classList.add('lock');
+		} else {
+			body.classList.remove('lock');
+		}
+	}, [isBurgerActive]);
 
 	const changeLanguage = (lng) => {
 		i18n.changeLanguage(lng);
@@ -43,6 +50,7 @@ const Header = () => {
 					<div className={burgerLinksClass}>
 						<NavLinkHeader className="home_link" onClick={() => setIsBurgerActive(false)} var='home' to='/' isActive={currentLocation.pathname === '/'}>{t('header.home')}</NavLinkHeader>
 						<div className="links">
+							<ThemeToggle/>
 							<div className="language_buttons">
 								<LanguageButtons isActive={isEnglish} onClick={() => changeLanguage('en')} var='eng'>En</LanguageButtons>
 								<LanguageButtons isActive={isUkrainian} onClick={() => changeLanguage('uk')}>Укр</LanguageButtons>

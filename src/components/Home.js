@@ -4,6 +4,7 @@ import { HOmeLink, HomeContainer, HomeTitles } from "./styled/HomeStyled";
 
 const Home = () => {
 	const { t } = useTranslation();
+
 	return (
 		<HomeContainer>
 			<div className="wrapper">

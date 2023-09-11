@@ -8,6 +8,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import translationEN from './en.json';
 import translationUK from './uk.json';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 i18n
   .use(LanguageDetector)
@@ -28,7 +30,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <I18nextProvider i18n={i18n}>
     <React.StrictMode>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </React.StrictMode>
   </I18nextProvider>
 );

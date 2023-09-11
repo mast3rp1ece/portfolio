@@ -1,5 +1,6 @@
 .skills_container {
 	overflow-x: hidden;
+	height: 100vh;
 }
 .skills_about {
 	display: flex;
