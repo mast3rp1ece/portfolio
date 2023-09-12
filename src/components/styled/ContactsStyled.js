@@ -2,6 +2,11 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const ContactsTitle = styled.h2 `
+	&:nth-child(2) a#mail {
+		color: rgb(230, 18, 18);
+		/* text-shadow: 1px 1px 5px black; */
+		letter-spacing: 1px;
+	}
 	color: whitesmoke;
 	text-transform: ${(props) => props.var === 'title' ? 'uppercase' : 'normal'};
 	font-size: ${(props) => props.var === 'title' ? '50px' : '16px'};
