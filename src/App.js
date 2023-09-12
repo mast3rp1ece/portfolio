@@ -21,6 +21,7 @@ function App() {
   const bodyStyle = {
     background: darkMode ? '' : '#dee4e7',
   }
+ 
   return (
     <Router>
       <div style={bodyStyle} className="App">

@@ -8,4 +8,5 @@ font-weight: bold;
 export const SkillsIcon = styled.img `
 	width: 96px;
 	height: 96px;
+	transform: ${(props) => props.var === 'css' ? 'scale(1.1)' : ''}
 `

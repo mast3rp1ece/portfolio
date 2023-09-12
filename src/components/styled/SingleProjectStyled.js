@@ -12,6 +12,7 @@ export const SingleProjectContainer = styled.section `
 export const SingleProject = styled.div `
 	color: #fff;
 	overflow-x: hidden;
+	height: 100vh;
 	padding: 100px 0 50px 0;
 `
 
@@ -51,22 +52,39 @@ export const ProjText = styled.div `
 `
 
 export const ProjLink = styled(Link) `
-	position: relative;
-	padding: 7px 13px;
+	/* position: relative; */
+	/* padding: 7px 13px; */
 	color: #fff;
-	border: 2px solid rgb(230,18,18);
+	margin-right: 4px;
+	/* border: 2px solid rgb(230,18,18);
 	border-radius: 30px;
 	transition: all 0.3s ease;
 	box-shadow: 2px 2px 10px black;
-	animation: show-project .8s ease 0s;
-	&::after {
+	animation: show-project .8s ease 0s; */
+	/* &::after {
 		content: url(${linkImage});
 		width: 24px;
 		height: 24px;
 		display: inline-block;
 		vertical-align: middle;
 		margin-left: 5px;
-	}
+	} */
+	/* &:hover{
+		background: grey;
+		border: 2px solid grey;
+	} */
+`
+export const LinkDiv = styled.div `
+position: relative;
+	padding: 7px 13px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	border: 2px solid rgb(230,18,18);
+	border-radius: 30px;
+	transition: all 0.3s ease;
+	box-shadow: 2px 2px 10px black;
+	animation: show-project .8s ease 0s;
 	&:hover{
 		background: grey;
 		border: 2px solid grey;
