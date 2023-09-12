@@ -43,9 +43,9 @@ const Header = () => {
 
 	return (
 		<div className="header_container">
-			<div className={burgerBlur}>
+			<div onClick={() => setIsBurgerActive(false)} className={burgerBlur}>
 			</div>
-			<div className="wrapper">
+			<div  className="wrapper">
 				<nav className="nav_container">
 					<div className={burgerBtnClass} onClick={toggleBurgerMenu}>
 						<span />

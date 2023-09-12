@@ -124,6 +124,7 @@
 	}
 	.nav_subcont.active {
 		left: 15px;
+		width: fit-content;
 	}
 	.nav_container {
 		height: 14px;
@@ -135,7 +136,6 @@
 	}
 	.burger_menu {
 		display: block;
-		margin-top: 44px;
 		z-index: 4;
 	}
 	.language_buttons {
