@@ -11,6 +11,7 @@ import Home from './components/Home';
 import PostPublication from './components/projects/PostPublication';
 import Eventer from './components/projects/Eventer';
 import Generator from './components/projects/Generator';
+import PageNotFound from './components/PageNotFound';
 import { useSelector } from 'react-redux';
 
 
@@ -38,6 +39,7 @@ function App() {
         <Route path='contacts' element={ <Contacts />} />
         <Route path='skills' element={ <Skills />} />
         <Route path='works' element={ <Works />} />
+        <Route path='/*' element={ <PageNotFound/>}/>
       </Routes>
       </div>
     </Router>
