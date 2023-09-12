@@ -4,6 +4,8 @@ import { useLocation } from "react-router-dom";
 import { NavLinkHeader, LanguageButtons } from "./styled/HeaderButtons";
 import './header.css';
 import ThemeToggle from "../redux/ThemeToggle";
+import { useMediaQuery } from "react-responsive";
+
 
 
 const Header = () => {
@@ -20,17 +22,19 @@ const Header = () => {
 	const burgerMenuClass = isBurgerActive ? 'burger_menu active' : 'burger_menu';
 	const burgerLinksClass = isBurgerActive ? 'nav_subcont active' : 'nav_subcont';
 	const burgerBlur = isBurgerActive ? 'blur_back active' : 'blur_back';
-
 	
+	const isMobile = useMediaQuery({ query: "(max-width: 768px)"});
 
 	useEffect(() => {
 		const body = document.body;
-		if (isBurgerActive) {
+		// const screenWidth = window.innerWidth;
+
+		if (isBurgerActive && isMobile) {
 			body.classList.add('lock');
 		} else {
 			body.classList.remove('lock');
 		}
-	}, [isBurgerActive]);
+	}, [isBurgerActive, isMobile]);
 
 	const changeLanguage = (lng) => {
 		i18n.changeLanguage(lng);

@@ -4,9 +4,30 @@ import styled from "styled-components";
 export const Label = styled.label `
 	background: #fff;
 	width: 40px;
-	transition: .3s ease;
+	/* transition: .3s ease; */
 	height: 20px;
 	border-radius: 20px;
+	.sun {
+		opacity: 0;
+	}
+	svg {
+		path {
+			transition: .3s ease;
+		}
+		&:nth-child(2) {
+			left: 3px;
+			top: 3px;
+		}
+		&:nth-child(1) {
+			left: 37px;
+			transform: translateX(-100%);
+			top: 3px;
+		}
+		width: 14px;
+		height: 14px;
+		position: absolute;
+		z-index: 9;
+	}
 	&:active {
 		&::after {
 			width: 25px;
@@ -27,6 +48,9 @@ export const Label = styled.label `
 		left: 2px;
 		box-shadow: 0 2px 5px rgba(0,0,0,0.4);
 	}
+	@media (max-width: 768px) {
+		order: 3;
+	}
 `
 export const Toggle = styled.input `
 	width: 0;
@@ -34,10 +58,19 @@ export const Toggle = styled.input `
 	visibility: hidden;
 	&:checked + ${Label}{
 		background: grey;
+		.moon {
+			opacity: 0;
+		}
+		.sun {
+			opacity: 1;
+		}
 		&::after {
 			left: 38px;
 			transform: translateX(-100%);
 			background: linear-gradient(180deg, #777, #3a3a3a);
 		}
 	}
+	/* @media (max-width: 768px) {
+		order: 3;
+	} */
 `

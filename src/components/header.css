@@ -101,14 +101,15 @@
 	position: absolute;
 	top: 0;
 }
-.blur_back.active {
-	backdrop-filter: blur(3px);
-	display: block;
-}
+
 @media (max-width: 768px) {
 	.burger_btn {
 		display: block;
 		left: 0;
+	}
+	.blur_back.active {
+		backdrop-filter: blur(3px);
+		display: block;
 	}
 	.home_link {
 		width: fit-content;
@@ -140,6 +141,7 @@
 	.language_buttons {
 		order: 2;
 	}
+	
 	.burger_menu.active {
 		left: 0;
 	}

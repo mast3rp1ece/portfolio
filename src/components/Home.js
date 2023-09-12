@@ -8,7 +8,7 @@ const Home = () => {
 
 	const darkMode = useSelector((state) => state.theme.darkMode);
 	const bodyStyle = {
-		background: darkMode ? '' : '#dee4e7',
+		// background: darkMode ? '' : '#dee4e7',
 		animation: darkMode ? '' : 'pulse2 5s infinite',
   	}
 	const darkText = {
