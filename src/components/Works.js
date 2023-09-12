@@ -35,7 +35,7 @@ const Works = () => {
 				<section className="works_description">
 					<div className="description_container">
 						<WorksIcon src={worksIcon} alt="Work icon" />
-						<WorksDescription var='work-title'>IT Global</WorksDescription>
+						<WorksDescription var='work-title'>WebWarp Studios</WorksDescription>
 						<WorksDescription>14.08.2022 - 02.01.2023</WorksDescription>
 						<WorksDescription var='work-description'>{t('work.description1')}</WorksDescription>
 					</div>
