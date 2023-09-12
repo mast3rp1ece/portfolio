@@ -40,7 +40,7 @@ const Contacts = () => {
 							<SocialLink to='https://www.instagram.com/kotovych.t/' target="_blank">
 								<img src={instagram} alt='Instagram'/>
 							</SocialLink>							
-							<SocialLink to='#'>
+							<SocialLink to='https://www.linkedin.com/in/taras-kotovych-656a45290/' target="_blank">
 								<img src={linked} alt='Instagram'/>
 							</SocialLink>							
 							<SocialLink to='https://github.com/mast3rp1ece' target="_blank">

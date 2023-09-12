@@ -38,7 +38,6 @@ const Header = () => {
 
 	const changeLanguage = (lng) => {
 		i18n.changeLanguage(lng);
-		setIsBurgerActive(false);
 	};
 
 	return (

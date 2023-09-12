@@ -24,6 +24,7 @@ export const LanguageButtons = styled.button `
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-weight: 600;
 	padding: 0 5px;
+	/* border: 1px solid #fff; */
 	background: ${(props) => (props.isActive ? "#fff" : "transparent")};
 	color: ${(props) => (props.isActive ? "rgb(8, 8, 39)" : "#fff")};
 	border-radius: ${(props) => props.var === 'eng' ? '5px 0 0 5px' : '0 5px  5px 0'};
