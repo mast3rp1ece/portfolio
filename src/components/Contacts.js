@@ -28,7 +28,6 @@ const Contacts = () => {
 	}
 	
 
-
 	return (
 		<div className="contacts_container">
 			<div className="wrapper">

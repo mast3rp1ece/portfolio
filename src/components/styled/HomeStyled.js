@@ -53,6 +53,7 @@ export const HOmeLink = styled(Link) `
 	/* box-shadow: 1px 1px 10px whitesmoke; */
 	&:hover {
 		background: ${(props) => (props.darkMode ? 'grey' : 'rgba(0, 0, 0, 0.2)')};
+		color: #fff;
 	}
 	animation: text-pulse 5s infinite ease 0s, show-project .8s ease 0s;
 `

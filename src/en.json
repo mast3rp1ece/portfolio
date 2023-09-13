@@ -37,5 +37,8 @@
 	"home.title": "Taras",
 	"home.title1": " Kotovych",
 	"home.subtitle": "<span>Front-End</span> Developer",
-	"home.link": "Get in Touch"
+	"home.link": "Get in Touch",
+	"404.title1": "Oops...",
+	"404.title2": "Page Not Found😢",
+	"404.link": "Go Home"
 }
