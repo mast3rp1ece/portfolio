@@ -13,11 +13,19 @@ import Eventer from './components/projects/Eventer';
 import Generator from './components/projects/Generator';
 import PageNotFound from './components/PageNotFound';
 import { useSelector } from 'react-redux';
+import React, { useState, useEffect} from 'react';
 
 
 
 function App() {
 
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1300);
+  }, []);
   const darkMode = useSelector((state) => state.theme.darkMode);
   const bodyStyle = {
     background: darkMode ? '' : '#dee4e7',
@@ -26,21 +34,29 @@ function App() {
   return (
     <Router>
       <div style={bodyStyle} className="App">
-      <Header />
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='projects'>
-          <Route index element={<Projects/>}/>
-          <Route path='signform' element={<SignForm/>}/>
-          <Route path='publication' element={<PostPublication/>}/>
-          <Route path='eventer' element={<Eventer/>}/>
-          <Route path='generator' element={<Generator/>}/>
-        </Route>
-        <Route path='contacts' element={ <Contacts />} />
-        <Route path='skills' element={ <Skills />} />
-        <Route path='works' element={ <Works />} />
-        <Route path='/*' element={ <PageNotFound/>}/>
-      </Routes>
+
+        {loading ? (
+        <div className="loader-container">
+          <div className="spinner"></div>
+        </div>
+      ) : (<>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='projects'>
+            <Route index element={<Projects/>}/>
+            <Route path='signform' element={<SignForm/>}/>
+            <Route path='publication' element={<PostPublication/>}/>
+            <Route path='eventer' element={<Eventer/>}/>
+            <Route path='generator' element={<Generator/>}/>
+          </Route>
+          <Route path='contacts' element={ <Contacts />} />
+          <Route path='skills' element={ <Skills />} />
+          <Route path='works' element={ <Works />} />
+          <Route path='/*' element={ <PageNotFound/>}/>
+        </Routes>
+        </>
+        )}
       </div>
     </Router>
   );
