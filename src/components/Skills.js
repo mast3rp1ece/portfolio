@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import skillsImage from "../img/ya4.jpg";
 import { SkillsDescription, SkillsIcon } from "./styled/SkillsStyled";
@@ -24,6 +24,12 @@ import { useSelector } from "react-redux";
 const Skills = () => {
 	const { t } = useTranslation();
 	const darkMode = useSelector((state) => state.theme.darkMode);
+	const [imgLoader, setImgLoader] = useState(true);
+	useEffect(() => {
+		if (skillsImage) {
+			setImgLoader(false);
+		};
+	}, []);
 
 	const cssIcons = darkMode ? cssIcon : cssIconDark;
 	const htmlIcons = darkMode ? htmlIcon : htmlIconDark;
@@ -43,6 +49,10 @@ const Skills = () => {
 
 	return (
 		<div className="skills_container">
+			{imgLoader ? ( 
+			<div className="loader-container">
+          <div className="spinner"></div>
+        </div>) : (
 			<div className="wrapper">
 				<section className="skills_about">
 					<div className="about_img">
@@ -89,7 +99,7 @@ const Skills = () => {
 						<SkillsDescription style={whiteText}>Figma</SkillsDescription>
 					</div>
 				</section>
-			</div>
+			</div>)}
 		</div>
 	)
 }

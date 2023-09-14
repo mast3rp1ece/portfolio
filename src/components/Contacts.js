@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import contactImage from '../img/contimg.png'
 import { ContactsTitle, SocialLink } from "./styled/ContactsStyled";
@@ -14,10 +14,17 @@ import { useSelector } from "react-redux";
 const Contacts = () => {
 	const { t } = useTranslation();
 	const darkMode = useSelector((state) => state.theme.darkMode);
-
+	const [imgLoader, setImgLoader] = useState(true);
+	useEffect(() => {
+		if (contactImage) {
+			setImgLoader(false);
+		}
+	}, [])
 	const instagram = darkMode ? instagramIcon : instagramIconDark;
 	const linked = darkMode ? linkedinIcon : linkedinIconDark;
 	const github = darkMode ? githubIcon : githubIconDark;
+
+	
 
 	const whiteText = {
 		color: darkMode ? '' : '#000',
@@ -30,6 +37,11 @@ const Contacts = () => {
 
 	return (
 		<div className="contacts_container">
+			{imgLoader ? (
+				<div className="loader-container">
+				<div className="spinner"></div>
+			 </div>
+			) : (
 			<div className="wrapper">
 				<div class="contacts_main">
 					<div className="main_text">
@@ -49,7 +61,7 @@ const Contacts = () => {
 					</div>
 					<img className="contact_main_image" src={contactImage} alt="Author" />
 					</div>
-			</div>
+			</div> )}
 		</div>
 	)
 }

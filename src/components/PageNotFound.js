@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
 import { NotFounDiv, BackLink, Photo, NotFoundTitle } from "./styled/404Styled"
 import notFoundPhoto from '../img/404new2.png';
 import { useSelector } from "react-redux";
@@ -8,10 +8,21 @@ import { useTranslation } from "react-i18next";
 const PageNotFound = () => {
 	const { t } = useTranslation();
 	const darkMode = useSelector((state) => state.theme.darkMode);
+	const [imgLoader, setImgLoader] = useState(true);
+	useEffect(() => {
+		if (notFoundPhoto) {
+			setImgLoader(false);
+		};
+	}, []);
 
 	
 
-	return (
+	return (<>
+		{imgLoader ? (
+			<div className="loader-container">
+         	 <div className="spinner"></div>
+        	</div>
+		) : (
 		<div className="wrapper">
 			<NotFounDiv>
 				<Photo src={notFoundPhoto} alt="404 image"/>
@@ -20,6 +31,8 @@ const PageNotFound = () => {
 				<BackLink darkMode={darkMode} to='/'>{t('404.link')}</BackLink>
 			</NotFounDiv>
 		</div>
+		)}
+		</>
 	)
 };
 
