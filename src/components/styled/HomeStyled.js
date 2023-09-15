@@ -42,9 +42,10 @@ export const HomeContainer = styled.div `
 `
 export const HOmeLink = styled(Link) `
 	font-size: 18px;
-	background: ${(props) => (props.darkMode ? 'greenyellow' : 'rgb(230, 18, 18)')};
+	background: ${(props) => (props.darkMode ? 'greenyellow' : '')};
 	color: rgb(8, 8, 39);
 	padding: 12px 25px;
+	box-shadow: ${(props) => (props.darkMode ? '' : 'inset 0 0 0 2px #000')};
 	border-radius: 30px;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	margin-top: 10px;
@@ -54,6 +55,7 @@ export const HOmeLink = styled(Link) `
 	&:hover {
 		background: ${(props) => (props.darkMode ? 'grey' : 'rgba(0, 0, 0, 0.2)')};
 		color: #fff;
+		box-shadow: none;
 	}
 	animation: text-pulse 5s infinite ease 0s, show-project .8s ease 0s;
 `
