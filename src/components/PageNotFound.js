@@ -10,11 +10,13 @@ const PageNotFound = () => {
 	const darkMode = useSelector((state) => state.theme.darkMode);
 	const [imgLoader, setImgLoader] = useState(true);
 	useEffect(() => {
-		if (notFoundPhoto) {
+		const img = new Image();
+		img.src = notFoundPhoto;
+		img.onload = () => {
 			setImgLoader(false);
 		};
 	}, []);
-
+	
 	
 
 	return (<>

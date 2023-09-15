@@ -26,7 +26,9 @@ const Skills = () => {
 	const darkMode = useSelector((state) => state.theme.darkMode);
 	const [imgLoader, setImgLoader] = useState(true);
 	useEffect(() => {
-		if (skillsImage) {
+		const img = new Image();
+		img.src = skillsImage;
+		img.onload = () => {
 			setImgLoader(false);
 		};
 	}, []);

@@ -16,9 +16,11 @@ const Contacts = () => {
 	const darkMode = useSelector((state) => state.theme.darkMode);
 	const [imgLoader, setImgLoader] = useState(true);
 	useEffect(() => {
-		if (contactImage) {
+		const img = new Image();
+		img.src = contactImage;
+		img.onload = () => {
 			setImgLoader(false);
-		}
+		};
 	}, [])
 	const instagram = darkMode ? instagramIcon : instagramIconDark;
 	const linked = darkMode ? linkedinIcon : linkedinIconDark;
@@ -43,7 +45,7 @@ const Contacts = () => {
 			 </div>
 			) : (
 			<div className="wrapper">
-				<div class="contacts_main">
+				<div className="contacts_main">
 					<div className="main_text">
 						<ContactsTitle style={whiteText} className="main_title" var='title' dangerouslySetInnerHTML={{__html: t('cont.title')}}></ContactsTitle>
 						<ContactsTitle style={whiteText2} className="main_subtitle" dangerouslySetInnerHTML={{__html: t('cont.subtitle')}}></ContactsTitle>
