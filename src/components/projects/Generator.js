@@ -11,7 +11,7 @@ import linkImage from '../projects/img/link.png';
 import linkImageDark from '../projects/img/link-dark.png';
 
 const Generator = () => {
-	const [imgLoader, setImgLoader] = useState();
+	const [imgLoader, setImgLoader] = useState(true);
 	const {t} = useTranslation();
 	const images =  useMemo(() => [
 		projImage1, projImage2, projImage3, projImage4,

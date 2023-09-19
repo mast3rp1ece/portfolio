@@ -10,7 +10,7 @@ import linkImage from '../projects/img/link.png';
 import linkImageDark from '../projects/img/link-dark.png';
 
 const Eventer = () => {
-	const [imgLoader, setImgLoader] = useState();
+	const [imgLoader, setImgLoader] = useState(true);
 	const {t} = useTranslation();
 	const images =  useMemo(() => [
 		projImage1, projImage2, projImage3,
@@ -44,9 +44,9 @@ const Eventer = () => {
 	return (
 		<SingleProject>
 			{imgLoader ? (
-			<div className="loader-container">
-         	 <div className="spinner"></div>
-        	</div>
+				<div className="loader-container">
+					<div className="spinner"></div>
+				</div>
 		) : (
 			<div className="wrapper">
 				<SingleProjectContainer>
