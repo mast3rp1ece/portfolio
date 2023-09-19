@@ -62,7 +62,7 @@ body.lock {
   justify-content: center;
   align-items: center;
   position: fixed;
-  background: rgba(0, 0, 0, 0.834);
+  background: rgb(8, 8, 39);
   z-index: 9;
 }
 

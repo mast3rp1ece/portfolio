@@ -11,6 +11,7 @@ import linkImage from '../projects/img/link.png';
 import linkImageDark from '../projects/img/link-dark.png';
 
 const PostPublication = () => {
+	const [imgLoader, setImgLoader] = useState(true);
 	const {t} = useTranslation();
 	const images =  useMemo(() => [
 		projImage1, projImage2, projImage3, projImage4,
@@ -18,6 +19,11 @@ const PostPublication = () => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	
 	useEffect(() => {
+		const img = new Image();
+		img.src = projImage1;
+		img.onload = () => {
+			setImgLoader(false);
+		};
 		const intervalId = setInterval(() => {
 		  setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
 		}, 3000);
@@ -37,6 +43,11 @@ const PostPublication = () => {
 
 	return (
 		<SingleProject>
+			{imgLoader ? (
+			<div className="loader-container">
+         	 <div className="spinner"></div>
+        	</div>
+		) : (
 			<div className="wrapper">
 				<SingleProjectContainer>
 					<ProjectTitle style={darkColor} var='projects_title'>{t('projects2.subtitle')}</ProjectTitle>
@@ -53,6 +64,7 @@ const PostPublication = () => {
 					</LinkDiv>
 				</SingleProjectSection>
 			</div>
+			)}
 		</SingleProject>
 	)
 }

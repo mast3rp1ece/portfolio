@@ -12,6 +12,7 @@ import linkImageDark from '../projects/img/link-dark.png';
 
 const SignForm = () => {
 	const {t} = useTranslation();
+	const [imgLoader, setImgLoader] = useState(true);
 	const images =  useMemo(() => [
 		projImage1, projImage2, projImage3, projImage4,
 	], []);
@@ -27,6 +28,11 @@ const SignForm = () => {
 	}
 	
 	useEffect(() => {
+		const img = new Image();
+		img.src = projImage1;
+		img.onload = () => {
+			setImgLoader(false);
+		};
 		const intervalId = setInterval(() => {
 		  setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
 		}, 3000);
@@ -36,6 +42,11 @@ const SignForm = () => {
 
 	return (
 		<SingleProject>
+			{imgLoader ? (
+			<div className="loader-container">
+         	 <div className="spinner"></div>
+        	</div>
+		) : (
 			<div className="wrapper">
 				<SingleProjectContainer>
 					<ProjectTitle style={darkColor} var='projects_title'>{t('projects1.subtitle')}</ProjectTitle>
@@ -52,6 +63,7 @@ const SignForm = () => {
 					</LinkDiv>
 				</SingleProjectSection>
 			</div>
+			)}
 		</SingleProject>
 	)
 }

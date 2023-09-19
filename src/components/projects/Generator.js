@@ -11,6 +11,7 @@ import linkImage from '../projects/img/link.png';
 import linkImageDark from '../projects/img/link-dark.png';
 
 const Generator = () => {
+	const [imgLoader, setImgLoader] = useState();
 	const {t} = useTranslation();
 	const images =  useMemo(() => [
 		projImage1, projImage2, projImage3, projImage4,
@@ -18,6 +19,11 @@ const Generator = () => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	
 	useEffect(() => {
+		const img = new Image();
+		img.src = projImage1;
+		img.onload = () => {
+			setImgLoader(false);
+		};
 		const intervalId = setInterval(() => {
 		  setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
 		}, 3000);
@@ -38,6 +44,11 @@ const Generator = () => {
 
 	return (
 		<SingleProject>
+			{imgLoader ? (
+			<div className="loader-container">
+         	 <div className="spinner"></div>
+        	</div>
+		) : (
 			<div className="wrapper">
 				<SingleProjectContainer>
 					<ProjectTitle style={darkColor} var='projects_title'>{t('projects4.subtitle')}</ProjectTitle>
@@ -54,6 +65,7 @@ const Generator = () => {
 					</LinkDiv>
 				</SingleProjectSection>
 			</div>
+		)}
 		</SingleProject>
 	)
 }
