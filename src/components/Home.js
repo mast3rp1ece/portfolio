@@ -28,7 +28,7 @@ const Home = () => {
 						<p style={surName} className="home_title surname">{t('home.title1')}</p>
 					</div>
 					<p style={darkText} className="subtitle" dangerouslySetInnerHTML={{__html: t('home.subtitle')}}></p>
-					<HOmeLink darkMode={darkMode} to='mailto:t.kotovych@gmail.com'>{t('home.link')}</HOmeLink>
+					<HOmeLink darkMode={darkMode} to='mailto:t.kotovych.w@gmail.com'>{t('home.link')}</HOmeLink>
 				</HomeTitles>
 			</div>
 		</HomeContainer>

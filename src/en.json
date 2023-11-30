@@ -5,7 +5,7 @@
 	"header.works": "Work Experience",
 	"header.contacts": "Contacts",
 	"cont.title": "My aspiration is to achieve <br/><span>excellence</span> in everything I do.",
-	"cont.subtitle": "Below are links to my social networks<br/> Or write me here - <a darkMode={darkMode} id='mail' href='mailto:taraskotovych@gmail.com'>t.kotovych@gmail.com</a>",
+	"cont.subtitle": "Below are links to my social networks<br/> Or write me here - <a darkMode={darkMode} id='mail' href='mailto:t.kotovych.w@gmail.com'>t.kotovych.w@gmail.com</a>",
 	"about.hello": "Hello Everyone 👋",
 	"about.title": "My name is Taras<br/> I am a Front-End <span>Developer</span><Cursor />",
 	"about.subtitle": "I'm a passionate Front-End Developer with a strong desire for innovation and a keen eye for detail. My journey in web development has been fueled by a deep love for creating beautiful and user-friendly interfaces. I'm dedicated to crafting efficient, responsive, and accessible websites that provide an exceptional user experience. With a background in both design and coding, I bring a unique blend of creativity and technical expertise to every project. Let's work together to turn your ideas into captivating digital experiences.",
