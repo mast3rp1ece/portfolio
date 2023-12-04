@@ -74,6 +74,10 @@ body.lock {
   border-radius: 50%;
   animation: spin-anim 1.2s linear infinite;
 }
+.description_container a {
+  color: red;
+  text-decoration: underline;
+}
 
 @keyframes spin-anim {
   0% {

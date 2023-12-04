@@ -12,7 +12,7 @@ export const WorksIcon = styled.img `
 `
 export const WorksDescription = styled.p `
 	font-weight: ${(props) => props.var === 'work-title' ? 'bold' : 'normal'};
-	font-style: ${(props) => props.var === 'work-description' ? 'italic': 'normal'};
+	font-style: ${(props) => props.var === 'work-description' || props.var === 'italic' ? 'italic': 'normal'};
 	font-size: ${(props) => props.var === 'work-title' ? '24px' : props.var === 'work-description' ? '16px' : '18px'};
 	border-bottom: ${(props) => props.var === 'work-title' ? '2px solid rgb(230, 18, 18)' : 'none'};
 	width: ${(props) => props.var === 'work-description' ? '100%' : 'auto'};
@@ -20,4 +20,7 @@ export const WorksDescription = styled.p `
 	@media (max-width: 650px) {
 		text-align: ${(props) => props.var === 'work-description' ? 'center' : 'left'};
 	}
+	color: ${(props) => props.var === 'date' ? 'grey' : ''};
+	font-size: ${(props) => props.var === 'date' ? '16px' : ''};
+	word-spacing: ${(props) => props.var === 'work-description' ? '3px' : ''};
 `

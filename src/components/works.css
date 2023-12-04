@@ -3,6 +3,7 @@
 	padding: 80px 0 30px 0;
 	overflow-x: hidden;
 }
+
 .works_photo {
 	display: flex;
 	align-items: center;
@@ -70,6 +71,7 @@
 	border-radius: 10px;
 	padding: 15px;
 }
+
 @keyframes shadow {
 	0% {box-shadow: none; transform: rotateY(720deg); opacity: 0;}
 	/* 50% {box-shadow: 10px 10px 20px #fff ;} */
